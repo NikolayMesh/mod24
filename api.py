@@ -2,11 +2,6 @@ import requests
 import json
 from input import email, password, auth_key, id
 
-
-
-
-
-
 def test_get_api_key():
     header = {'accept': 'application/json', 'email': email, 'password': password}
 
@@ -14,11 +9,7 @@ def test_get_api_key():
     assert res_api_key_get.status_code == 200
     print(res_api_key_get.text)
     test = json.loads(res_api_key_get.text)
-    # auth_key = {test["key"]}
-    # print(auth_key)
-
-
-
+   
 
 def test_add_pet():
     input_pet = {'name':'Bob',
@@ -34,8 +25,6 @@ def test_add_pet():
     iD = {test["id"]}
     print(iD)
     
-
-
 
 def test_get_api_pets():
     header = {'accept': 'application/json', "auth_key": auth_key}
