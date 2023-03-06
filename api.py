@@ -50,12 +50,6 @@ def test_Update_pets_put():
     assert name == name_new
 
 
-
-
-
-
-
-
 def test_delete_pets():
     header = {'accept': 'application/json', "auth_key": auth_key}
 
